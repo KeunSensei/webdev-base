@@ -22,5 +22,3 @@ Maak een database naam aan en zet in het bestand **core/db_connect.php**
 - ***functions***
     - Hier komen de _functions_ van de webshop in te staan. Denk hierbij aan het ophalen van producten of het plaatsen van een bestelling.
 
- ## Code conventions
-Link notion: https://www.notion.so/Code-afspraken-cb7f9788b9ae46dfa782545ec3aec572
