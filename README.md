@@ -2,9 +2,11 @@
 
 ## Starten van applicatie
 
-In de **database** map staan een __webshop.sql__
+In de **database** map staan een __backup.sql__
 
-Zorg dat je lokaal dit bestand in een database **webshop** hebt geimporteerd.
+Zorg dat je je eigen database backup in deze map zet.
+
+Maak een database naam aan en zet in het bestand **core/db_connect.php**
 
 ## Mappenstructuur
 
