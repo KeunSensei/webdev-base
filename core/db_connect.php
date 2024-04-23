@@ -32,6 +32,3 @@ function prettyDump ( $var ) {
     var_dump($var);
     echo "</pre>";
 }
-
-
-
