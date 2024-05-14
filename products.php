@@ -1,5 +1,8 @@
 <?php
     include('core/header.php');
+    include('functions/products.php');
+
+    $products = getProducts();
 ?>
 <div class="row">
     <div class="col-12">

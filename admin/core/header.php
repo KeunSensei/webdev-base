@@ -18,6 +18,6 @@
             <div class="btn-group" role="group">
                 <div><a href="<?=BASEURL_CMS;?>users/" class="btn btn-primary">Gebruikers</a></div>
                 <div><a href="<?=BASEURL_CMS;?>orders/" class="btn btn-primary">Bestellingen</a></div>
-                <div><a href="<?=BASEURL_CMS;?>producten" class="btn btn-primary">Producten</a></div>
+                <div><a href="<?=BASEURL_CMS;?>products/" class="btn btn-primary">Producten</a></div>
             </div>
         </div>
