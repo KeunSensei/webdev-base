@@ -26,6 +26,7 @@ if ($con -> connect_errno) {
 
 define("BASEURL","http://localhost/webdev-base/");
 define("BASEURL_CMS","http://localhost/webdev-base/admin/");
+define("ABSOLUTE_HREF","/Users/kborghols/Sites/localhost/webdev-base/");
 
 function prettyDump ( $var ) {
     echo "<pre>";
