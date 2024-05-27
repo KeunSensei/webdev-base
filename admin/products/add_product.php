@@ -7,7 +7,11 @@ if(isset($_POST['submit']) && $_POST['submit'] != ''){
         $$key = $con->real_escape_string($value);
     }
 
-    // prettyDump($_POST);
+    prettyDump($_FILES);
+
+    exit();
+
+    // $product_name = $_POST['product_name'];
     $sql = "INSERT INTO products (product_name, product_description, product_price) VALUES (?,?,?);";
     $insertqry = $con->prepare($sql);
     if($insertqry === false) {
@@ -24,9 +28,11 @@ if(isset($_POST['submit']) && $_POST['submit'] != ''){
             // prettyDump($_FILES);
 
             if(!empty($_FILES) && isset($_FILES["product_photo1"]['name'])  && $_FILES["product_photo1"]['name'] != "" && $_FILES["product_photo1"]['size'] != ""){
-                $photo1 = $_FILES["product_photo1"]['name'];
 
+
+                $photo1 = $_FILES["product_photo1"]['name'];
                 move_uploaded_file($_FILES["product_photo1"]['tmp_name'], ABSOLUTE_HREF."upload/products/".$photo1);
+
 
                 $sqlphoto1 = "INSERT INTO product_photos (url, product_id) VALUES (?,?);";
                 $photo1qry = $con->prepare($sqlphoto1);
@@ -104,8 +110,6 @@ if(isset($_POST['submit']) && $_POST['submit'] != ''){
                 $photo4qry->close();
             }
 
-
-
         }else{
             echo mysqli_error($con);
         }
@@ -134,7 +138,7 @@ if(isset($_POST['submit']) && $_POST['submit'] != ''){
             </div>
             <div class="mb-3">
                 <label for="basic-url" class="form-label">Product foto's</label>
-                <input type="file" class="form-control" name="product_photo1" >
+                <input type="file" class="form-control" name="product_photo1[]" multiple >
                 <input type="file" class="form-control" name="product_photo2" >
                 <input type="file" class="form-control" name="product_photo3" >
                 <input type="file" class="form-control" name="product_photo4" >
